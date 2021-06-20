@@ -2,6 +2,8 @@
 
 Still ongoing 
 
-## Hiding the API keys
-- Create an `env` file in the repo with the key inside
+## Steps to run locally
 
+- Clone or download this repository
+- Insert your key in the variable definied at the file `.env.example`
+- Rename it for `.env`
