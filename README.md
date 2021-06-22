@@ -2,6 +2,12 @@
 
 This repository contains notebooks from the assingment `Jupyter, APIs, git and GitHub`.
 
+[!TOC]
+
+## HW 5 - Pandas
+
+## HW 4 - APIs
+
 # API links
 
 * [Last.FM](https://www.last.fm/api/)
