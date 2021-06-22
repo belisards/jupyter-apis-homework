@@ -1,17 +1,22 @@
 # jupyter-apis-homework
 
-This repository contains notebooks from the assingment `Jupyter, APIs, git and GitHub`.
 
-[!TOC]
 
-## HW 5 - Pandas
+## Steps to run this notebook locally
 
-## HW 4 - APIs
+- Clone or download this repository
+- Insert your key in the variable definied at the file `.env.example`
+- Rename it for `.env`
+
+
+## HW 4 - Jupyter, APIs, git and GitHub
+The folder `hw4-apis` contains notebooks from the assignment "Jupyter, APIs, git and GitHub".
 
 # API links
 
-* [Last.FM](https://www.last.fm/api/)
 * [Weather](https://www.last.fm/api/)
+* [Last.FM](https://www.last.fm/api/)
+
 
 # Main takeaways
 
@@ -25,8 +30,5 @@ This repository contains notebooks from the assingment `Jupyter, APIs, git and G
 - 
 
 
-## Steps to run this notebook locally
 
-- Clone or download this repository
-- Insert your key in the variable definied at the file `.env.example`
-- Rename it for `.env`
+## HW 5 - Pandas
