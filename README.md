@@ -10,7 +10,7 @@
 
 
 ## HW 4 - Jupyter, APIs, git and GitHub
-The folder `hw4-apis` contains notebooks from the assignment "Jupyter, APIs, git and GitHub".
+The folder `hw4` contains notebooks from the assignment "Jupyter, APIs, git and GitHub".
 
 # API links
 
