@@ -1,5 +1,4 @@
-# jupyter-apis-homework
-
+# DDJ with Python exercises
 
 
 ## Steps to run this notebook locally
@@ -8,27 +7,33 @@
 - Insert your key in the variable definied at the file `.env.example`
 - Rename it for `.env`
 
-
-## HW 4 - Jupyter, APIs, git and GitHub
-The folder `hw4` contains notebooks from the assignment "Jupyter, APIs, git and GitHub".
-
-# API links
+### API links
 
 * [Weather](https://www.last.fm/api/)
 * [Last.FM](https://www.last.fm/api/)
 
+---
 
-# Main takeaways
+## Exercises
+
+### HW 1 - Basic Python
+
+### HW 2 - List and dictionaries
+
+### HW 3 - APIs and JSON
+
+### HW 4 - Jupyter, APIs, git and GitHub
+The folder `hw4` contains notebooks from the assignment "Jupyter, APIs, git and GitHub".
+
+### Main takeaways
 
 - How to use python-dotenv
 - How to calculate weekdays time range
 
-
-# Main challenges
+### Main challenges
 
 - How to define "next thursday" with Python?
-- 
 
+### HW 5 - Pandas
 
-
-## HW 5 - Pandas
+### HW 6 - Dirty and strings-y data 
