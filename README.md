@@ -1,5 +1,6 @@
 # DDJ with Python exercises
 
+Homeworks from the LEDE program 2021.
 
 ## Steps to run this notebook locally
 
