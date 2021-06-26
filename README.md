@@ -24,7 +24,6 @@ Homeworks from the LEDE program 2021.
 ### HW 3 - APIs and JSON
 
 ### HW 4 - Jupyter, APIs, git and GitHub
-The folder `hw4` contains notebooks from the assignment "Jupyter, APIs, git and GitHub".
 
 ### Main takeaways
 
@@ -39,6 +38,6 @@ The folder `hw4` contains notebooks from the assignment "Jupyter, APIs, git and 
 
 ### HW 6 - Dirty and strings-y data 
 
-## Beer dataset
+#### Beer dataset
 
-## Dogs dataset
+#### Dogs dataset
