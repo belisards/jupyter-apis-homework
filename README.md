@@ -37,3 +37,7 @@ The folder `hw4` contains notebooks from the assignment "Jupyter, APIs, git and 
 ### HW 5 - Pandas
 
 ### HW 6 - Dirty and strings-y data 
+
+## Beer dataset
+
+## Dogs dataset

@@ -25,7 +25,7 @@ import pandas as pd
 # In[4]:
 
 
-df = pd.read_excel('data/richpeople.xlsx')
+df = pd.read_excel('richpeople.xlsx')
 
 
 # ## 2) Checking your data

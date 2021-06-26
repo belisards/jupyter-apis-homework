@@ -1,6 +1,5 @@
 # June 15 2021
 
-
 import requests
 
 
