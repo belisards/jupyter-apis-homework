@@ -38,6 +38,12 @@ Homeworks from the LEDE program 2021.
 
 ### HW 6 - Dirty and strings-y data 
 
+### HW 7
+
+### HW 8
+
+### HW 9
+
 #### Beer dataset
 
 #### Dogs dataset
