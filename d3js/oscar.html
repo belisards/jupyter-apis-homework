@@ -1,0 +1,105 @@
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script type="text/javascript">
+
+link = 'https://gist.githubusercontent.com/gurmanbh/7f24b09ec9da582559c63869ead3d3a3/raw/d33b4387e7a4553ef28bce9c8f047a3adefa8d7c/oscars.csv'
+
+d3.csv(link).then(function(data){
+  
+// update slider
+  years = data.map(oscar_year => oscar_year.Year)
+  min = d3.min(years)
+  max = d3.max(years)
+  
+// configure slider
+d3.select('#slider')
+    .attr('min',min)
+    .attr('max',max);
+ 
+d3.select('#year_min')
+      .text(min)
+ 
+d3.select('#year_max')
+      .text(max)
+  
+slider = document.getElementById("slider");
+year_label = document.getElementById("my_year");
+
+// listener
+slider.addEventListener('input',  function() {
+  
+// year
+year = slider.value
+year_label.innerHTML = year
+ 
+// entries
+movies = data.filter(entries=>entries.Year===year)
+winner = movies.filter(infos=>infos.Winner=='1')
+nominees = movies.filter(infos=>infos.Winner!='1')
+// replace things
+d3.select('#winner')
+  .text(winner[0].Name)
+// append nominees
+d3.select('#nominees')
+    .selectAll('li')
+    .remove()
+  
+  d3.select('#nominees')
+    .selectAll('ul')
+    .data(nominees)
+    .enter()
+    .append('li')
+    .text(d=>d.Name);
+});
+})
+</script>
+
+<style>
+    * {
+  font-family: monospace;
+  text-align: center;
+}
+
+body{
+  background: skyblue;
+}
+
+hide{
+  display: none;
+}
+
+h1,p,h2{
+  color:black;
+}
+
+#winner, #my_year,li{
+  color:gray;
+  font-size:20px;
+}
+</style>
+
+<html>
+    <h1>
+        <label for="years">Select your birthyear</label>
+        </h1>
+        
+        <span id="year_min"></span>
+        <input type="range" id="slider">
+        <span id="year_max"></span>
+        
+        <div class="hide">
+          <h1>
+          <p>In <span id="my_year">____</span>, the Oscar went to.. </p>
+          </h1> 
+            <span id="winner">{⚠️ use the slide above to select a year}</span>
+           <h1>
+           <p>The nominees were...</p>
+           </h1>
+          <span id="nominees">
+           <ul>
+          </ul> 
+           <span id="nominees">
+        </div>
+        
+        
+        
+</html>

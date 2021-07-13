@@ -1,0 +1,139 @@
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script type="text/javascript">
+link = "https://raw.githubusercontent.com/belisards/dados/main/cost_1gb_data.csv"
+
+d3.csv(link)
+  .then(function(countries){ 
+  
+height = 2000
+width = 600
+format = d3.format(".2")
+
+svg = d3.select('#chart')
+    .append('svg')
+    .attr('height',height)
+    .attr('width',width)
+
+/// fix column issues
+countries.map(function(d){
+   d.avg_price = +d.avg_price.replace(/,/g, '.')
+   d.country_id = d.country.toLowerCase().replace(/ /g, '')
+})
+  
+max = d3.max(countries,d=>+d.avg_price)
+min = d3.min(countries,d=>+d.avg_price)
+
+yScale = d3.scaleLinear()
+   .domain([min, max]) 
+   .range([height-100, 100]) 
+
+rScale = d3.scaleLinear()
+   .domain([min, max]) 
+   .range([10, 30]) 
+
+simulation = d3.forceSimulation(countries)
+.force("x",d3.forceX(width/2))
+.force("y",d3.forceY(d => yScale(+d.avg_price))) 
+.force("collide", d3.forceCollide().radius(d=>rScale(+d.avg_price)+3)) 
+.stop()
+
+for (let i = 0; i<=150; i++){
+  simulation.tick()
+}
+  
+chartGroup = svg.selectAll("g")
+    .data(countries)
+  .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(100,100)"; });
+  
+chartGroup.append('circle')
+  .attr('cx',d=>d.x)
+  .attr('cy',d=>d.y)
+  .attr('r',d=>rScale(+d.avg_price))
+  .attr('stroke','black')
+  .attr('fill', function (d) {
+      return 'url(#' + d.country_id + ')'
+    })
+  .on("mouseover",function(){
+        d3.select(d=>d.country)
+            .attr("opacity", "1")
+    })
+   .on("mouseout",function(){
+        d3.select(d=>d.country)
+            .attr("opacity", "0")
+    });
+
+chartGroup.append("text")
+    .attr("class", d=>d.country)
+    .attr("dy", d=>d.y)
+    .attr("dx", d=>d.x + 50)
+    .attr("opacity", "1")
+    .text(d=>d.country + ': ' + d.avg_price);
+  
+chartGroup.append('defs')
+    .selectAll('.circle')
+    .data(countries)
+    .enter()
+    .append('pattern')
+    .attr('id', function (d) {
+      return d.country_id
+    })
+    .attr('class', 'circle')
+    .attr('height', '100%')
+    .attr('width', '100%')
+    .attr('patternContentUnits', 'objectBoundingBox')
+    .append('image')
+    .attr('height', '1')
+    .attr('width', '1')
+    .attr('preserveAspectRatio', 'none')
+    .attr('xlink:href', d=>d.url)
+
+  svg.append('g')
+    .attr('transform', 'translate(40,0)')
+    .attr('class', 'axis-y')
+    .call(d3.axisLeft(yScale).tickFormat(d=>format(d)))
+
+})
+</script>
+<style>
+  * {
+  font-family: monospace;
+}
+
+p, select, button{
+  font-size: 1.5rem;
+}
+
+body{
+  background: lightgray;
+}
+
+.hide{
+  display: none;
+}
+
+.movie-sentence{
+  margin-top: 1rem;
+  width: 350px;
+  margin:4rem auto;
+}
+
+li, .movie{
+  font-size: 1.5rem;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+</style>
+
+<html>
+ 
+<h1> Cost in dollar of 1 GB per country</h1>
+
+Scroll over the circles to discover the data.
+
+<div id="chart"></div>
+
+
+</html>
