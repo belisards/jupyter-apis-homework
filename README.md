@@ -1,4 +1,4 @@
-# DDJ with Python exercises
+# LEDE 2021
 
 Assignments and projects from the LEDE program 2021.
 
