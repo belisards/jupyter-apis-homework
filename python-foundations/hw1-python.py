@@ -1,4 +1,3 @@
-# Adriano Belisário Feitosa da Costa
 # Jun 12 2021
 # Homework 1
 
