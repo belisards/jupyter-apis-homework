@@ -1,0 +1,57 @@
+/* this main element holds all of our steps and our chart
+   the most important part here is the "position: relative"
+   it isn't critical to know exactly what it does right now
+   but if you're interested you can read more on Mozilla.org
+*/
+
+main {
+    align-items: center;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-items */
+    display: flex;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+    flex-direction: column;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction */
+    position: relative;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/position */
+}
+
+
+/* this holds our SVG and is where D3 puts the chart */
+
+#chart {
+    position: sticky;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky_positioning */
+    top: 1rem;
+}
+
+#year {
+    fill: #3b3b3b;
+    font-family: monospace;
+    font-size: 110px;
+}
+
+
+/* these are our "steps", each one is a bit of text
+   that triggers some sort of change in the chart
+*/
+
+.step {
+    color: #fff;
+    height: 25vh;
+    margin-bottom: 50vh;
+    position: relative;
+    z-index: 20;
+}
+
+.step:last-child {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child */
+    margin-bottom: 0;
+}
+
+.step p {
+    background-color: #3b3b3b;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 320px;
+}
