@@ -17,14 +17,17 @@ unzip wb-shapefile.zip
 # let us merge our geojson with our data
 # keys mention which ID to match on for our first dataset, and then our second dataset
 # -o says which file to output this to
-mapshaper world_boundaries/WB_countries_Admin0_lowres.geojson -join world-child-mortality.csv keys=ISO_A3,code -o out.geojson
+mapshaper WB_Boundaries_GeoJSON_lowres/WB_countries_Admin0_lowres.geojson -join world-child-mortality.csv keys=ISO_A3,code -o out.geojson
 
 # There are these things called projections. They make our data look a certain way
 # Let's check which all projections we have 
 mapshaper -projections
 
 # I like natural earth. so going to change my data to that projection using the -proj flag
+#List projections with: mapshaper -projections
 mapshaper out.geojson -proj natearth -o projection.json
+
+
 
 # Let us test out a map. 
 # -colorizer defines a function to calculate colors based on breaks. we give the function a name.
