@@ -1,4 +1,12 @@
-# ffmpeg
+# CLI tips
+
+## Useful links
+[Original repo from Gurman](https://github.com/gurmanbh/command-line-graphics-lede.git)
+
+[Video timelapses to pratice](https://www.pexels.com/search/videos/timelapse/ )
+
+
+## Commands
 
 - Takes a frame from the video every second. %04d means four digits. Increase the r number to have more picutres. If there's 24 frames per second then you just have to put in 24.
 
