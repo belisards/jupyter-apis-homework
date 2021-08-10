@@ -3,4 +3,4 @@
 */.ipynb_checkpoints/
 */.DS_Store
 scipy_nltk/*.csv
-scipy_nltk/homework/*.csv
+scipy_nltk/*/*.csv
