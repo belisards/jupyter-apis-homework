@@ -1,6 +1,6 @@
 # LEDE 2021
 
-Codes, assignments and projects from LEDE program 2021. 
+Third-party code, some assignments and templates from LEDE program 2021. 
 
 ## Steps to run this notebook locally
 
