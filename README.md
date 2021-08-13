@@ -12,7 +12,7 @@ Needed for some notebooks using scraping techniques.
 
 # Directories
 
-More references and descriptions (some day)...
+More references and descriptions (some day). 
 
 ## Mapbox
 
