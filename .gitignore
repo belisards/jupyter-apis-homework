@@ -4,3 +4,4 @@
 */.DS_Store
 scipy_nltk/*.csv
 scipy_nltk/*/*.csv
+scipy_nltk/*/*.dat
