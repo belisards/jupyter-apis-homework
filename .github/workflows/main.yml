@@ -1,5 +1,9 @@
 name: scrape
 on:
+  # Trigger the workflow on push or pull request
+  push:
+    branches:
+      - final_assignment
   workflow_dispatch:
   schedule:
     - cron: '5 0 * * *'
