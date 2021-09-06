@@ -3,9 +3,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 1 * * *'
-    push:
-    branches:
-      - final_assignment
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -19,12 +16,13 @@ jobs:
       - name: Install all necessary packages
         run: pip install requests beautifulsoup4 pandas
       - name: Run the scraping script
-        run: python scrape.py
+        run: python acidadeonline.py
       - name: Commit and push if content changed
         run: |-
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
           git add -A
+          git checkout final_assignment
           timestamp=$(date -u)
           git commit -m "Latest data: ${timestamp}" || exit 0
           git push
