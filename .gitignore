@@ -1,9 +1,0 @@
-.env
-.ipynb_checkpoints/
-*/.ipynb_checkpoints/
-*/.DS_Store
-scipy_nltk/*.csv
-scipy_nltk/*/*.csv
-scipy_nltk/*/*/*.csv
-# scipy_nltk/*/*.dat
-scipy_nltk/linear_regression/associated_press/R12221550_SL140.csv
