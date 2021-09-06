@@ -2,7 +2,10 @@ name: scrape
 on:
   workflow_dispatch:
   schedule:
-    - cron: '40 * * * *'
+    - cron: '0 1 * * *'
+    push:
+    branches:
+      - final_assignment
 jobs:
   scrape:
     runs-on: ubuntu-latest
