@@ -66,7 +66,7 @@ df
 
 
 # %%
-filename = 'stories.csv'
+filename = 'clarkesworld/stories.csv'
 
 df.to_csv(filename, index=False)
 
