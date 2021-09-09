@@ -68,7 +68,7 @@ df
 # %%
 filename = 'clarkesworld/stories.csv'
 
-df.to_csv(filename, index=False)
+# df.to_csv(filename, index=False)
 
 # %% [markdown]
 # ## Auto-updating scraper `3 points`
